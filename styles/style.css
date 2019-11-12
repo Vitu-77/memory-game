@@ -1,0 +1,152 @@
+body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.restart{
+    font-family: sans-serif;
+    font-size: 20px;
+
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: rgb(98, 35, 117);
+    color: #fff;
+    z-index: 10;
+    font-family: sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: 300ms;
+}
+.restart:hover{
+    background-color: rgb(141, 73, 161);
+}
+
+.lock-body-events{
+    pointer-events: none;
+}
+
+table tr td{
+    width: 140px;
+    height: 140px;
+    background-color: rgb(98, 35, 117);
+    border-radius: 5px;
+    padding: 0;
+    cursor: pointer;
+    transition-property: transform, background-color; 
+    transition-duration: 250ms, 0ms;
+    transition-delay: 1ms, 0ms;
+    position: relative;
+}
+
+table tr td:hover{
+    background-color: rgb(141, 73, 161);
+}
+
+table tr td::after, table tr td::before{
+    border-radius: 5px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    transform: rotateZ(180deg) rotateX(180deg);
+}
+
+.show-card{
+    background-color: transparent;
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+.show-card:hover{
+    background-color: transparent;
+    cursor: default;
+}
+.unflipped:hover{
+    background-color: #fff;
+    cursor: default;
+}
+
+.unflipped::after, .ununflipped::before{
+    display: none;
+} 
+
+.card-1-unflipped, .card-1::after{
+    background: url('../images/android.png');
+    background-size: cover;
+    background-position: center center;
+}
+.card-2-unflipped, .card-2::after{ 
+    background: url('../images/chrome.png');
+    background-size: cover;
+    background-position: center center;
+}
+.card-3-unflipped, .card-3::after{ 
+    background: url('../images/facebook.png');
+    background-size: cover;
+    background-position: center center;
+}
+.card-4-unflipped, .card-4::after{ 
+    background: url('../images/firefox.png');
+    background-size: cover;
+    background-position: center center;
+}
+.card-5-unflipped, .card-5::after{ 
+    background: url('../images/googleplus.png');
+    background-size: cover;
+    background-position: center center;
+}
+.card-6-unflipped, .card-6::after{ 
+    background: url('../images/html5.png');
+    background-size: cover;
+    background-position: center center;
+}
+.card-7-unflipped, .card-7::after{ 
+    background: url('../images/twitter.png');
+    background-size: cover;
+    background-position: center center;
+}
+.card-8-unflipped, .card-8::after{ 
+    background: url('../images/windows.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.wrong-combination::before{
+    background: url('../images/cross.png');
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
+.initial-table tr td{
+    background-size: cover;
+    background-position: center center;
+}
+
+.initial-card-1 {background: url('../images/android.png'); pointer-events: none}
+.initial-card-2 {background: url('../images/chrome.png'); pointer-events: none}
+.initial-card-3 {background: url('../images/facebook.png'); pointer-events: none}
+.initial-card-4 {background: url('../images/firefox.png'); pointer-events: none}
+.initial-card-5 {background: url('../images/googleplus.png'); pointer-events: none}
+.initial-card-6 {background: url('../images/html5.png'); pointer-events: none}
+.initial-card-7 {background: url('../images/twitter.png'); pointer-events: none}
+.initial-card-8 {background: url('../images/windows.png'); pointer-events: none}
+
+.initial-card-1:hover{background-color: #fff; cursor: default}
+.initial-card-2:hover{background-color: #fff; cursor: default}
+.initial-card-3:hover{background-color: #fff; cursor: default}
+.initial-card-4:hover{background-color: #fff; cursor: default}
+.initial-card-5:hover{background-color: #fff; cursor: default}
+.initial-card-6:hover{background-color: #fff; cursor: default}
+.initial-card-7:hover{background-color: #fff; cursor: default}
+.initial-card-8:hover{background-color: #fff; cursor: default}
